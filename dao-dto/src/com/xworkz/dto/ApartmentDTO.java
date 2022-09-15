@@ -1,5 +1,7 @@
 package com.xworkz.dto;
 
+import java.util.Arrays;
+
 import java.io.Serializable;
 
 public class ApartmentDTO implements Serializable {

@@ -1,5 +1,6 @@
 package com.xworkz.dto;
 
+import java.util.Arrays;
 import java.io.Serializable;
 
 public class AlcoholDTO implements Serializable {
@@ -25,7 +26,7 @@ public class AlcoholDTO implements Serializable {
 
 	@Override
 	public String toString() {
-		
+
 		return "AlcoholDTO [alcoholName=" + alcoholName + ", brand=" + type + ", alcoholInMl=" + alcoholInMl
 				+ ", alcoholPrice=" + alcoholPrice + ", alcoholcolor=" + alcoholcolor + ", alcoholContent="
 				+ alcoholContent + ", sweet=" + sweet + ", odour=" + odour + ", acidic=" + acidic + ", liquid=" + liquid
@@ -152,6 +153,5 @@ public class AlcoholDTO implements Serializable {
 	public void setPackedIn(String packedIn) {
 		this.packedIn = packedIn;
 	}
-	
-	
+
 }
