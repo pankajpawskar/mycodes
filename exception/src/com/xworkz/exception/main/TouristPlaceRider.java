@@ -1,4 +1,4 @@
-package com.xworkz.exception.rider;
+package com.xworkz.exception.main;
 
 import com.xworkz.exception.checkedexception.TouristPlaceValidException;
 import com.xworkz.exception.daoImpl.TouristPlaceDAOImpl;
