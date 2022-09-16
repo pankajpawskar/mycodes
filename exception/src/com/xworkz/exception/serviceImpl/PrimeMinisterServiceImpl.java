@@ -12,19 +12,22 @@ public class PrimeMinisterServiceImpl implements PrimeMinisterService {
 	}
 
 	@Override
-	public boolean validateAndSave(String name) throws CheckedException {
+	public boolean validateAndSave(String name) {
 		if (name != null && name.length() > 4 && name.length() < 50) {
-			if (this.primeMinisterDAO.checkName(name)) {
-				System.out.println("Name is not duplicate");
-				return primeMinisterDAO.save(name);
+			System.out.println("Name is valid");
+			this.primeMinisterDAO.checkName(name);
+			boolean present = this.primeMinisterDAO.checkName(name);
+			if (present) {
+				System.err.println("name is already exist ");
 			} else {
-				System.err.println("name is duplicate");
-				throw new CheckedException("duplicate");
+				System.out.println("name is Not already exist ");
+				this.primeMinisterDAO.save(name);
+
 			}
 		} else {
-			System.err.println("valid name");
-			throw new CheckedException("Not valid");
-		}
-	}
+			System.err.println("Not valid");
 
+		}
+		return true;
+	}
 }

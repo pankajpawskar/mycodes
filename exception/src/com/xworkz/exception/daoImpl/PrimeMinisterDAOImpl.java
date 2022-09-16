@@ -5,21 +5,15 @@ import com.xworkz.exception.uncheckedexception.UnCheckedException;
 
 public class PrimeMinisterDAOImpl implements PrimeMinisterDAO {
 
-	private String[] dataStore = new String[5];
+	private String[] dataStore = new String[6];
 	private int index;
 
 	@Override
 	public boolean save(String name) throws UnCheckedException {
-		if (this.index < this.dataStore.length) {
-			this.dataStore[index] = name;
-			System.out.println("dataStore:" + name + "index" + this.index);
-			this.index++;
-			return true;
-		} else {
-			System.err.println("index value is not valid");
-			throw new UnCheckedException("not valid");
-		}
-
+		this.dataStore[index] = name;
+		System.out.println("name = " + name + " " + "Index:" + this.index);
+		this.index++;
+		return true;
 	}
 
 	@Override
