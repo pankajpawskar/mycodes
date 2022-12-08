@@ -5,6 +5,9 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 import com.xworkz.nexus.configuration.SpringConfiguration;
 
 public class SpringWebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+	public SpringWebInitializer() {
+		System.out.println("SpringWebInitializer created");
+	}
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
